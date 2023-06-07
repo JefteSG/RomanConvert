@@ -13,8 +13,13 @@ function ConvertForRoman(){
         num-=current
     }else{ num+=current }
     } 
-    res.textContent = num
-    integerNumber.value = num
+    if (isNaN(num)){
+        res.innerText = "Digite um numero romano valido"
+    } else {
+        res.textContent = num
+        ntegerNumber.value = num    
+    }
+    
 }
 function convertForInteger() {
   let num = parseInt(integerNumber.value)
